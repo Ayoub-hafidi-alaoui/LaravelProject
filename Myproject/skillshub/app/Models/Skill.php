@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Skill extends Model
 {
     use HasFactory;
+    protected $guarded=['id','created_at','updated_at'];
+
     public function cats() {
         return $this->belongsTo(Cat::class);
     }
